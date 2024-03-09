@@ -1,2 +1,10 @@
-﻿// For more information see https://aka.ms/fsharp-console-apps
-printfn "Hello from F#"
+﻿open HouseholdManager.Adapter.API
+open Microsoft.Extensions.DependencyInjection
+
+let private setupServices (services: IServiceCollection) = ()
+
+[<EntryPoint>]
+let main args =
+
+
+    Host.run args setupServices
