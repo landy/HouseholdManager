@@ -23,6 +23,14 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HouseholdManager.Adapter.AP
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HouseholdManager.Cookbook", "src\HouseholdManager.Cookbook\HouseholdManager.Cookbook.fsproj", "{AE5967FE-01E2-47C1-8E29-05B2282459EC}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HouseholdManager.Adapter.PostgreSQL", "src\HouseholdManager.Adapter.PostgreSQL\HouseholdManager.Adapter.PostgreSQL.fsproj", "{8BA4223B-2ABC-406F-968A-ED6C0C96C9E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{B8D890B0-51BF-435B-A72C-0FA5795DEB8E}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DbMigrations", "tools\DbMigrations\DbMigrations.fsproj", "{AE5EA54E-33D0-4A72-A6F6-B3E2FDA57B8A}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HouseholdManager.CookbookTests", "tests\HouseholdManager.CookbookTests\HouseholdManager.CookbookTests.fsproj", "{2BCD21DD-3C94-454E-B761-4D8D74620D79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +40,9 @@ Global
 		{011E33F7-19A3-4790-95CE-D61D7F5CFD25} = {38CA55B6-92CE-43EF-B743-893AE4284CDA}
 		{8CB1FEA3-382F-4937-954B-3F4917F904F7} = {38CA55B6-92CE-43EF-B743-893AE4284CDA}
 		{AE5967FE-01E2-47C1-8E29-05B2282459EC} = {38CA55B6-92CE-43EF-B743-893AE4284CDA}
+		{8BA4223B-2ABC-406F-968A-ED6C0C96C9E7} = {38CA55B6-92CE-43EF-B743-893AE4284CDA}
+		{AE5EA54E-33D0-4A72-A6F6-B3E2FDA57B8A} = {B8D890B0-51BF-435B-A72C-0FA5795DEB8E}
+		{2BCD21DD-3C94-454E-B761-4D8D74620D79} = {DAA497EC-54C5-4A4F-B982-696A90DC37A7}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{011E33F7-19A3-4790-95CE-D61D7F5CFD25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -46,5 +57,17 @@ Global
 		{AE5967FE-01E2-47C1-8E29-05B2282459EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE5967FE-01E2-47C1-8E29-05B2282459EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE5967FE-01E2-47C1-8E29-05B2282459EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BA4223B-2ABC-406F-968A-ED6C0C96C9E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA4223B-2ABC-406F-968A-ED6C0C96C9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BA4223B-2ABC-406F-968A-ED6C0C96C9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BA4223B-2ABC-406F-968A-ED6C0C96C9E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE5EA54E-33D0-4A72-A6F6-B3E2FDA57B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5EA54E-33D0-4A72-A6F6-B3E2FDA57B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5EA54E-33D0-4A72-A6F6-B3E2FDA57B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5EA54E-33D0-4A72-A6F6-B3E2FDA57B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BCD21DD-3C94-454E-B761-4D8D74620D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BCD21DD-3C94-454E-B761-4D8D74620D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BCD21DD-3C94-454E-B761-4D8D74620D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BCD21DD-3C94-454E-B761-4D8D74620D79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

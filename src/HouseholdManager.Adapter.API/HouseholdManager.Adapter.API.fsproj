@@ -7,6 +7,10 @@
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="Program.fs"/>
+        <Content Include="paket.references"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\HouseholdManager.Cookbook\HouseholdManager.Cookbook.fsproj"/>
     </ItemGroup>
     <Import Project="..\..\.paket\Paket.Restore.targets"/>
 </Project>

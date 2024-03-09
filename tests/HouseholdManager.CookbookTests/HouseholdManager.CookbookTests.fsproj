@@ -1,14 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
+
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+        <IsPackable>false</IsPackable>
+        <GenerateProgramFile>false</GenerateProgramFile>
+        <IsTestProject>true</IsTestProject>
     </PropertyGroup>
+
     <ItemGroup>
-        <Compile Include="Domain.fs"/>
-        <Compile Include="Ports.fs"/>
-        <Compile Include="ListRecipesUseCase.fs"/>
+        <Compile Include="UnitTest1.fs"/>
+        <Compile Include="Program.fs"/>
         <Content Include="paket.references"/>
     </ItemGroup>
+
     <Import Project="..\..\.paket\Paket.Restore.targets"/>
 </Project>

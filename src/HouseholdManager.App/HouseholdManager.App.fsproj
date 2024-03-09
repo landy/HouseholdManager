@@ -16,9 +16,11 @@
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         </Content>
+        <Content Include="paket.references"/>
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\HouseholdManager.Adapter.API\HouseholdManager.Adapter.API.fsproj"/>
+        <ProjectReference Include="..\HouseholdManager.Adapter.PostgreSQL\HouseholdManager.Adapter.PostgreSQL.fsproj"/>
         <ProjectReference Include="..\HouseholdManager.Cookbook\HouseholdManager.Cookbook.fsproj"/>
     </ItemGroup>
     <Import Project="..\..\.paket\Paket.Restore.targets"/>

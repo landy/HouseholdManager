@@ -1,0 +1,1 @@
+﻿module private HouseholdManager.Cookbook.Domain
