@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{96C49E2D-B
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HouseholdManager.App", "src\HouseholdManager.App\HouseholdManager.App.fsproj", "{011E33F7-19A3-4790-95CE-D61D7F5CFD25}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HouseholdManager.AppHost", "src\HouseholdManager.AppHost\HouseholdManager.AppHost.fsproj", "{011E33F7-19A3-4790-95CE-D61D7F5CFD25}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HouseholdManager.Adapter.API", "src\HouseholdManager.Adapter.API\HouseholdManager.Adapter.API.fsproj", "{8CB1FEA3-382F-4937-954B-3F4917F904F7}"
 EndProject

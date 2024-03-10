@@ -1,8 +1,10 @@
 source https://api.nuget.org/v3/index.json
+storage: none
 
 nuget FSharp.Core
 nuget Npgsql
 nuget Dapper
+nuget FsToolkit.ErrorHandling.TaskResult
 
 nuget dbup-postgresql
 nuget Microsoft.Extensions.Configuration
@@ -12,7 +14,11 @@ nuget Microsoft.Extensions.Configuration.Json
 
 group Tests
     source https://api.nuget.org/v3/index.json
+    storage: none
+    
+    nuget FSharp.Core
     nuget Microsoft.NET.Test.Sdk
     nuget NUnit
     nuget NUnit.Analyzers
     nuget NUnit3TestAdapter
+    nuget FsUnit

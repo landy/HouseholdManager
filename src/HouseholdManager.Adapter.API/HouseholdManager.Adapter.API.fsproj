@@ -6,8 +6,10 @@
         <RootNamespace>HouseholdManager.Adapter.API</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
+        <Compile Include="Cookbook.fs"/>
         <Compile Include="Program.fs"/>
         <Content Include="paket.references"/>
+        <Content Include="Recipes.http"/>
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\HouseholdManager.Cookbook\HouseholdManager.Cookbook.fsproj"/>

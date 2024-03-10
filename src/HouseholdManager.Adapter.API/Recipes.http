@@ -1,0 +1,14 @@
+@HouseholdManager.API_HostAddress = http://localhost:5000
+
+### Get all recipes
+GET {{HouseholdManager.API_HostAddress}}/Recipes
+Accept: application/json
+
+### Get recipe by id
+POST {{HouseholdManager.API_HostAddress}}/Recipes/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Recipe 1"
+}

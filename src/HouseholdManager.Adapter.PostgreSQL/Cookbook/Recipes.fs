@@ -4,7 +4,8 @@ open System
 open System.Data
 open Dapper
 
-open HouseholdManager.Cookbook.Ports
+open HouseholdManager.Cookbook
+open HouseholdManager.Cookbook.Domain
 
 type private RecipeRow =
     { Id: Guid
@@ -23,4 +24,19 @@ let loadRecipes (conn: IDbConnection) : RecipesListLoader =
                 rows
                 |> Seq.toList
                 |> List.map (fun row -> { Title = row.Title; Image = "" })
+        }
+
+let addRecipe (conn: IDbConnection) : RecipeSaver =
+    fun (recipe: Recipe) ->
+        task {
+            let query =
+                "INSERT INTO recipes (id, title, description) VALUES (@Id, @Title, '')"
+
+            let row =
+                {| Id = recipe.Id
+                   Title = recipe.Title |}
+
+            let! _ = conn.ExecuteAsync(query, row)
+
+            return ()
         }

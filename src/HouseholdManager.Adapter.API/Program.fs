@@ -1,13 +1,12 @@
 module HouseholdManager.Adapter.API.Host
 
 open System
-open System.Threading.Tasks
 open Microsoft.AspNetCore.Builder
 open Microsoft.Extensions.Configuration
 open Microsoft.Extensions.DependencyInjection
 open Microsoft.Extensions.Hosting
 
-open HouseholdManager.Cookbook.Ports
+
 
 let run
     (args: string[])
@@ -21,15 +20,7 @@ let run
 
     app.MapGet("/", Func<string>(fun () -> "Hello World!")) |> ignore
 
-    app.MapGet(
-        "/recipes",
-        Func<UseCase.ListRecipes, Task<RecipeListItem[]>>(fun listRecipes ->
-            task {
-                let! recipes = listRecipes ()
-                return recipes |> List.toArray
-            })
-    )
-    |> ignore
+    Cookbook.registerEndpoints app
 
     app.Run()
 

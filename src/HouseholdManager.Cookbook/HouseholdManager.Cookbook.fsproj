@@ -6,8 +6,8 @@
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="Domain.fs"/>
-        <Compile Include="Ports.fs"/>
         <Compile Include="ListRecipesUseCase.fs"/>
+        <Compile Include="AddRecipeUseCase.fs"/>
         <Content Include="paket.references"/>
     </ItemGroup>
     <Import Project="..\..\.paket\Paket.Restore.targets"/>
