@@ -19,7 +19,7 @@ let configureAddRecipe (services: IServiceCollection) =
     services.AddScoped<AddRecipeWorkflow>(
         Func<IServiceProvider, AddRecipeWorkflow>(fun sc ->
             let conn = sc.GetRequiredService<IDbConnection>()
-            let adder = Cookbook.Recipes.addRecipe conn
+            let adder = Cookbook.Recipes.saveCreatedRecipe conn
             let validator = AddRecipeUseCase.validateRequest
             AddRecipeUseCase.execute validator adder)
     )

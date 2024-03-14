@@ -6,7 +6,6 @@ open NUnit.Framework
 open FsUnit
 
 open HouseholdManager.Cookbook
-open HouseholdManager.Cookbook.Domain
 
 [<TestCase("", true)>]
 [<TestCase("Test", false)>]
@@ -33,12 +32,12 @@ let ``Adding a valid recipe to the cookbook should succeed`` () =
 [<Test>]
 let ``Adding a valid recipe stores the recipe`` () =
     task {
-        let recipeStore = ConcurrentDictionary<Guid, Recipe>()
+        let recipeStore = ConcurrentDictionary<Guid, string>()
         let recipe: AddRecipeRequest = { Title = "test" }
         let validator: AddRecipeValidator = fun _ -> Ok { Title = "" }
 
         let saver: RecipeSaver =
-            fun r -> task { recipeStore.TryAdd(Guid.Empty, r) |> ignore }
+            fun r -> task { recipeStore.TryAdd(Guid.Empty, r.Title) |> ignore }
 
         let! _ = AddRecipeUseCase.execute validator saver Guid.Empty recipe
 

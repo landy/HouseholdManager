@@ -1,4 +1,4 @@
-﻿module HouseholdManager.Cookbook.Domain
+﻿module private HouseholdManager.Cookbook.Domain
 
 open System
 

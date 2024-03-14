@@ -4,15 +4,19 @@ open System
 open System.Threading.Tasks
 open FsToolkit.ErrorHandling
 
-open HouseholdManager.Cookbook.Domain
 
 type AddRecipeRequest = { Title: string }
 type ValidatedAddRecipeRequest = { Title: string }
 
+type RecipeCreated =
+    { Id: Guid
+      Title: string
+      Description: string }
+
 type AddRecipeValidator =
     AddRecipeRequest -> Result<ValidatedAddRecipeRequest, string>
 
-type RecipeSaver = Recipe -> Task<unit>
+type RecipeSaver = RecipeCreated -> Task<unit>
 
 type NewRecipeId = Guid
 
