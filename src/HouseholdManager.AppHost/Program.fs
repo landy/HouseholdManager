@@ -1,7 +1,10 @@
-﻿open Microsoft.Extensions.Configuration
+﻿module HouseholdManager.AppHost.App
+
+open Microsoft.Extensions.Configuration
 open Microsoft.Extensions.DependencyInjection
 
 open HouseholdManager.Adapter.API
+open HouseholdManager.AppHost
 
 let private setupServices
     (settings: ConfigurationManager)
@@ -10,14 +13,16 @@ let private setupServices
 
     let connectionString = settings.GetConnectionString("householddb")
 
-    HouseholdManager.AppHost.Adapters.PostgreSQL.configureServices
-        connectionString
-        services
-    |> HouseholdManager.AppHost.Cookbook.configureServices
+    Adapters.PostgreSQL.configureServices connectionString services
+    |> Cookbook.configureServices
     |> ignore
 
 
+type Program() =
+    static member Run args =
+        let api = Host.HouseholdManagerApi()
+        api.Run args setupServices
 
 
 [<EntryPoint>]
-let main args = Host.run args setupServices
+let main args = Program.Run args

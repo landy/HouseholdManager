@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+        <GenerateProgramFile>false</GenerateProgramFile>
+        <IsTestProject>true</IsTestProject>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="UnitTest1.fs"/>
+        <Compile Include="Program.fs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="paket.references"/>
+        <ProjectReference Include="..\..\src\HouseholdManager.Adapter.API\HouseholdManager.Adapter.API.fsproj"/>
+        <ProjectReference Include="..\..\src\HouseholdManager.AppHost\HouseholdManager.AppHost.fsproj"/>
+    </ItemGroup>
+
+    <Import Project="..\..\.paket\Paket.Restore.targets"/>
+</Project>

@@ -22,3 +22,4 @@ group Tests
     nuget NUnit.Analyzers
     nuget NUnit3TestAdapter
     nuget FsUnit
+    nuget Microsoft.AspNetCore.Mvc.Testing

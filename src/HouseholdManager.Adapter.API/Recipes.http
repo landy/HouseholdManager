@@ -10,5 +10,5 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "title": "Recipe 1"
+  "Title": "Recipe 1"
 }
